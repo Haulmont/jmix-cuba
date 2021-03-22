@@ -24,7 +24,6 @@ import io.jmix.core.Entity;
 import io.jmix.core.Messages;
 import io.jmix.core.QueryUtils;
 import io.jmix.core.common.event.Subscription;
-import io.jmix.ui.UiProperties;
 import io.jmix.ui.component.SecuredActionsHolder;
 import io.jmix.ui.component.data.Options;
 import io.jmix.ui.component.data.meta.EntityOptions;
@@ -34,6 +33,7 @@ import io.jmix.ui.component.data.options.OptionsBinder;
 import io.jmix.ui.component.impl.ComboBoxImpl;
 import io.jmix.ui.component.impl.WebResource;
 import io.jmix.ui.icon.IconResolver;
+import io.jmix.ui.property.UiComponentsProperties;
 import io.jmix.ui.widget.JmixPickerField;
 import io.jmix.ui.widget.JmixSearchSelectPickerField;
 import org.apache.commons.lang3.StringUtils;
@@ -96,7 +96,7 @@ public class WebSearchPickerField<V extends Entity> extends WebPickerField<V>
     public void afterPropertiesSet() {
         super.afterPropertiesSet();
 
-        setPageLength(applicationContext.getBean(UiProperties.class).getComboBoxPageLength());
+        setPageLength(getUiComponentsProperties().getComboBoxPageLength());
     }
 
     @Override
