@@ -39,8 +39,8 @@ import io.jmix.ui.component.Component;
 import io.jmix.ui.component.Tree;
 import io.jmix.ui.icon.Icons;
 import io.jmix.ui.icon.JmixIcon;
-import io.jmix.ui.property.UiComponentsProperties;
-import io.jmix.ui.property.UiScreensProperties;
+import io.jmix.ui.UiComponentsProperties;
+import io.jmix.ui.UiScreensProperties;
 import org.springframework.context.annotation.Scope;
 
 import java.util.Collections;

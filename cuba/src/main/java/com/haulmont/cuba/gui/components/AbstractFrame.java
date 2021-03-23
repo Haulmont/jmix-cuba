@@ -29,7 +29,7 @@ import io.jmix.ui.component.Component;
 import io.jmix.ui.component.Fragment;
 import io.jmix.ui.component.Frame;
 import io.jmix.ui.icon.Icons;
-import io.jmix.ui.property.UiScreensProperties;
+import io.jmix.ui.UiScreensProperties;
 import io.jmix.ui.screen.*;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

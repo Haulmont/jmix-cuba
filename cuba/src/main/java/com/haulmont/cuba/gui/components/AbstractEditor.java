@@ -43,7 +43,7 @@ import io.jmix.ui.component.Component;
 import io.jmix.ui.component.ComponentsHelper;
 import io.jmix.ui.component.ValidationErrors;
 import io.jmix.ui.component.Window;
-import io.jmix.ui.property.UiScreensProperties;
+import io.jmix.ui.UiScreensProperties;
 import io.jmix.ui.screen.ReadOnlyAwareScreen;
 import io.jmix.ui.screen.ReadOnlyScreensSupport;
 import io.jmix.ui.util.OperationResult;

@@ -35,7 +35,7 @@ import io.jmix.ui.component.Frame;
 import io.jmix.ui.component.Window;
 import io.jmix.ui.component.*;
 import io.jmix.ui.icon.Icons;
-import io.jmix.ui.property.UiScreensProperties;
+import io.jmix.ui.UiScreensProperties;
 import io.jmix.ui.screen.*;
 import io.jmix.ui.util.OperationResult;
 import io.jmix.ui.util.UnknownOperationResult;

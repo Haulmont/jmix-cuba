@@ -41,7 +41,7 @@ import io.jmix.ui.component.Component;
 import io.jmix.ui.component.ComponentsHelper;
 import io.jmix.ui.icon.Icons;
 import io.jmix.ui.icon.JmixIcon;
-import io.jmix.ui.property.UiComponentsProperties;
+import io.jmix.ui.UiComponentsProperties;
 import org.springframework.context.annotation.Scope;
 
 import javax.annotation.Nullable;

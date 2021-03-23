@@ -19,8 +19,8 @@ package com.haulmont.cuba.gui.xml;
 
 import com.google.common.collect.ImmutableMap;
 import com.haulmont.cuba.CubaProperties;
-import io.jmix.ui.property.UiComponentsProperties;
-import io.jmix.ui.property.UiScreensProperties;
+import io.jmix.ui.UiComponentsProperties;
+import io.jmix.ui.UiScreensProperties;
 import io.jmix.ui.xml.PropertyShortcutLoader;
 
 import java.util.Map;

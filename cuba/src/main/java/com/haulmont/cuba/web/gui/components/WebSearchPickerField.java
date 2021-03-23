@@ -33,7 +33,6 @@ import io.jmix.ui.component.data.options.OptionsBinder;
 import io.jmix.ui.component.impl.ComboBoxImpl;
 import io.jmix.ui.component.impl.WebResource;
 import io.jmix.ui.icon.IconResolver;
-import io.jmix.ui.property.UiComponentsProperties;
 import io.jmix.ui.widget.JmixPickerField;
 import io.jmix.ui.widget.JmixSearchSelectPickerField;
 import org.apache.commons.lang3.StringUtils;

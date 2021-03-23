@@ -17,7 +17,8 @@
 package com.haulmont.cuba.client.sys;
 
 import com.haulmont.cuba.gui.components.LookupPickerField;
-import io.jmix.ui.property.UiComponentsProperties;
+import io.jmix.ui.UiComponentsProperties;
+import io.jmix.ui.UiProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -28,6 +29,8 @@ public class PersistenceManagerClient {
 
     @Autowired
     protected UiComponentsProperties componentsProperties;
+    @Autowired
+    protected UiProperties uiProperties;
 
     public boolean useLookupScreen(String entityName) {
         String fieldType = componentsProperties.getEntityFieldType().get(entityName);
@@ -35,10 +38,10 @@ public class PersistenceManagerClient {
     }
 
     public int getFetchUI(String entityName) {
-        return componentsProperties.getEntityPageSize(entityName);
+        return uiProperties.getEntityPageSize(entityName);
     }
 
     public int getMaxFetchUI(String entityName) {
-        return componentsProperties.getEntityMaxFetchSize(entityName);
+        return uiProperties.getEntityMaxFetchSize(entityName);
     }
 }

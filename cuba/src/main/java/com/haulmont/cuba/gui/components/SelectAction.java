@@ -21,7 +21,7 @@ import io.jmix.core.Messages;
 import io.jmix.core.MetadataTools;
 import io.jmix.ui.action.AbstractAction;
 import io.jmix.ui.component.Component;
-import io.jmix.ui.property.UiScreensProperties;
+import io.jmix.ui.UiScreensProperties;
 import io.jmix.ui.screen.LookupScreen;
 
 import java.util.Collection;
