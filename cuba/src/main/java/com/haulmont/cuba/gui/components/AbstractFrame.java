@@ -29,7 +29,7 @@ import io.jmix.ui.component.Component;
 import io.jmix.ui.component.Fragment;
 import io.jmix.ui.component.Frame;
 import io.jmix.ui.icon.Icons;
-import io.jmix.ui.UiScreensProperties;
+import io.jmix.ui.UiScreenProperties;
 import io.jmix.ui.screen.*;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -420,7 +420,7 @@ public class AbstractFrame extends ScreenFragment implements com.haulmont.cuba.g
         }
 
         NotificationType notificationType = NotificationType.valueOf(
-                AppBeans.get(UiScreensProperties.class).getValidationNotificationType()
+                AppBeans.get(UiScreenProperties.class).getValidationNotificationType()
         );
         showNotification(messages.getMessage("validationFail.caption"), buffer.toString(), notificationType);
     }

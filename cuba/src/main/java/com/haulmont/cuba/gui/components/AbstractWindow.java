@@ -35,7 +35,7 @@ import io.jmix.ui.component.Frame;
 import io.jmix.ui.component.Window;
 import io.jmix.ui.component.*;
 import io.jmix.ui.icon.Icons;
-import io.jmix.ui.UiScreensProperties;
+import io.jmix.ui.UiScreenProperties;
 import io.jmix.ui.screen.*;
 import io.jmix.ui.util.OperationResult;
 import io.jmix.ui.util.UnknownOperationResult;
@@ -171,7 +171,7 @@ public class AbstractWindow extends Screen
 
                 UnknownOperationResult result = new UnknownOperationResult();
 
-                if (this instanceof Committable && getApplicationContext().getBean(UiScreensProperties.class).isUseSaveConfirmation()) {
+                if (this instanceof Committable && getApplicationContext().getBean(UiScreenProperties.class).isUseSaveConfirmation()) {
                     Committable committable = (Committable) this;
 
                     screenValidation.showSaveConfirmationDialog(this, closeAction)

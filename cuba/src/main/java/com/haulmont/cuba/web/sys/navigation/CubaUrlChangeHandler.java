@@ -32,7 +32,7 @@ public class CubaUrlChangeHandler extends UrlChangeHandler {
             return true;
         }
 
-        if (screensProperties.isDefaultScreenCanBeClosed()) {
+        if (screenProperties.isDefaultScreenCanBeClosed()) {
             return false;
         }
 

@@ -47,7 +47,7 @@ import io.jmix.ui.component.impl.AbstractField;
 import io.jmix.ui.icon.Icons;
 import io.jmix.ui.icon.JmixIcon;
 import io.jmix.ui.model.InstanceContainer;
-import io.jmix.ui.UiScreensProperties;
+import io.jmix.ui.UiScreenProperties;
 import io.jmix.ui.screen.*;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -97,7 +97,7 @@ public class WebTokenList<V extends Entity> extends AbstractField<CubaTokenList<
     protected Metadata metadata;
     protected MetadataTools metadataTools;
     protected WindowConfig windowConfig;
-    protected UiScreensProperties screensProperties;
+    protected UiScreenProperties screenProperties;
     protected ScreenBuilders screenBuilders;
     protected Icons icons;
     protected EntityStates entityStates;
@@ -154,8 +154,8 @@ public class WebTokenList<V extends Entity> extends AbstractField<CubaTokenList<
     }
 
     @Autowired
-    public void setUiScreensProperties(UiScreensProperties screensProperties) {
-        this.screensProperties = screensProperties;
+    public void setUiScreenProperties(UiScreenProperties screenProperties) {
+        this.screenProperties = screenProperties;
     }
 
     @Autowired
@@ -555,7 +555,7 @@ public class WebTokenList<V extends Entity> extends AbstractField<CubaTokenList<
     protected void handleSelection(Collection<V> selected) {
         Collection<V> reloadedSelected = new ArrayList<>();
         //check that selected items are loaded with the correct view and reload selected items if not all the required fields are loaded
-        FetchPlan viewForField = screensProperties.isReloadUnfetchedAttributesFromLookupScreens() ?
+        FetchPlan viewForField = screenProperties.isReloadUnfetchedAttributesFromLookupScreens() ?
                 getViewForField() :
                 null;
         if (viewForField != null) {

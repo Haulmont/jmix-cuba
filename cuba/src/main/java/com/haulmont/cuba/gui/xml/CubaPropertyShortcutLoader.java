@@ -19,8 +19,8 @@ package com.haulmont.cuba.gui.xml;
 
 import com.google.common.collect.ImmutableMap;
 import com.haulmont.cuba.CubaProperties;
-import io.jmix.ui.UiComponentsProperties;
-import io.jmix.ui.UiScreensProperties;
+import io.jmix.ui.UiComponentProperties;
+import io.jmix.ui.UiScreenProperties;
 import io.jmix.ui.xml.PropertyShortcutLoader;
 
 import java.util.Map;
@@ -36,10 +36,10 @@ public class CubaPropertyShortcutLoader extends PropertyShortcutLoader {
 
     protected CubaProperties cubaProperties;
 
-    public CubaPropertyShortcutLoader(UiComponentsProperties componentsProperties,
-                                      UiScreensProperties screensProperties,
+    public CubaPropertyShortcutLoader(UiComponentProperties componentProperties,
+                                      UiScreenProperties screenProperties,
                                       CubaProperties cubaProperties) {
-        super(componentsProperties, screensProperties);
+        super(componentProperties, screenProperties);
 
         this.cubaProperties = cubaProperties;
     }

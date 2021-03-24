@@ -65,8 +65,8 @@ import io.jmix.ui.menu.MenuItemCommands;
 import io.jmix.ui.model.ScreenData;
 import io.jmix.ui.model.impl.ScreenDataXmlLoader;
 import io.jmix.ui.navigation.UrlChangeHandler;
-import io.jmix.ui.UiComponentsProperties;
-import io.jmix.ui.UiScreensProperties;
+import io.jmix.ui.UiComponentProperties;
+import io.jmix.ui.UiScreenProperties;
 import io.jmix.ui.screen.FrameOwner;
 import io.jmix.ui.screen.ScreenOptions;
 import io.jmix.ui.settings.UserSettingService;
@@ -308,10 +308,10 @@ public class CubaConfiguration {
 
     @Bean("cuba_PropertyShortcutLoader")
     @Primary
-    protected CubaPropertyShortcutLoader propertyShortcutLoader(UiComponentsProperties componentsProperties,
-                                                                UiScreensProperties screensProperties,
+    protected CubaPropertyShortcutLoader propertyShortcutLoader(UiComponentProperties componentProperties,
+                                                                UiScreenProperties screenProperties,
                                                                 CubaProperties cubaProperties) {
-        return new CubaPropertyShortcutLoader(componentsProperties, screensProperties, cubaProperties);
+        return new CubaPropertyShortcutLoader(componentProperties, screenProperties, cubaProperties);
     }
 
     @EventListener

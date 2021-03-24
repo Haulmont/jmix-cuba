@@ -42,7 +42,7 @@ import io.jmix.ui.component.data.meta.EntityOptions;
 import io.jmix.ui.component.data.meta.EntityValueSource;
 import io.jmix.ui.icon.Icons;
 import io.jmix.ui.icon.JmixIcon;
-import io.jmix.ui.UiComponentsProperties;
+import io.jmix.ui.UiComponentProperties;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.annotation.Scope;
 
@@ -185,7 +185,7 @@ public interface PickerField<V extends Entity> extends Field<V>, EntityPicker<V>
 
         protected boolean editable = true;
 
-        protected UiComponentsProperties properties = AppBeans.get(UiComponentsProperties.class);
+        protected UiComponentProperties properties = AppBeans.get(UiComponentProperties.class);
 
         public StandardAction(String id, PickerField pickerField) {
             super(id);

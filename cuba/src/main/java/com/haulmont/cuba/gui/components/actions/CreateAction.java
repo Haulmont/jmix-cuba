@@ -39,8 +39,8 @@ import io.jmix.ui.component.Component;
 import io.jmix.ui.component.Tree;
 import io.jmix.ui.icon.Icons;
 import io.jmix.ui.icon.JmixIcon;
-import io.jmix.ui.UiComponentsProperties;
-import io.jmix.ui.UiScreensProperties;
+import io.jmix.ui.UiComponentProperties;
+import io.jmix.ui.UiScreenProperties;
 import org.springframework.context.annotation.Scope;
 
 import java.util.Collections;
@@ -174,9 +174,9 @@ public class CreateAction extends ListAction
 
         this.icon = AppBeans.get(Icons.class).get(JmixIcon.CREATE_ACTION);
 
-        setShortcut(AppBeans.get(UiComponentsProperties.class).getTableInsertShortcut());
+        setShortcut(AppBeans.get(UiComponentProperties.class).getTableInsertShortcut());
 
-        this.addFirst = AppBeans.get(UiScreensProperties.class).isCreateActionAddsFirst();
+        this.addFirst = AppBeans.get(UiScreenProperties.class).isCreateActionAddsFirst();
     }
 
     /**
@@ -457,7 +457,7 @@ public class CreateAction extends ListAction
      * Whether this action will add a new instance to the beginning of the datasource's collection.
      * Affects only standalone datasources, for nested datasources new items are always added to the end.
      *
-     * @see UiScreensProperties#isCreateActionAddsFirst()
+     * @see UiScreenProperties#isCreateActionAddsFirst()
      */
     public void setAddFirst(boolean addFirst) {
         this.addFirst = addFirst;

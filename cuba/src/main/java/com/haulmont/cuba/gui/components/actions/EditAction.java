@@ -35,7 +35,7 @@ import io.jmix.ui.component.Component;
 import io.jmix.ui.component.data.meta.EntityDataUnit;
 import io.jmix.ui.icon.Icons;
 import io.jmix.ui.icon.JmixIcon;
-import io.jmix.ui.UiComponentsProperties;
+import io.jmix.ui.UiComponentProperties;
 import org.springframework.context.annotation.Scope;
 
 import java.util.*;
@@ -163,7 +163,7 @@ public class EditAction extends ItemTrackingAction
 
         this.icon = AppBeans.get(Icons.class).get(JmixIcon.EDIT_ACTION);
 
-        setShortcut(AppBeans.get(UiComponentsProperties.class).getTableEditShortcut());
+        setShortcut(AppBeans.get(UiComponentProperties.class).getTableEditShortcut());
     }
 
     @Override
