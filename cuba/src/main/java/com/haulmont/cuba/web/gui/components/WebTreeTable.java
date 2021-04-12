@@ -32,7 +32,7 @@ import com.haulmont.cuba.gui.data.impl.DatasourceImplementation;
 import com.haulmont.cuba.gui.presentation.LegacyPresentationsDelegate;
 import com.haulmont.cuba.gui.presentation.Presentations;
 import com.haulmont.cuba.settings.component.LegacySettingsDelegate;
-import com.haulmont.cuba.settings.converter.LegacyTableSettingsConverter;
+import com.haulmont.cuba.settings.converter.LegacyTreeTableSettingsConverter;
 import com.haulmont.cuba.web.gui.components.table.CubaTableFieldFactoryImpl;
 import com.haulmont.cuba.web.gui.components.table.TableDelegate;
 import io.jmix.core.Entity;
@@ -117,7 +117,7 @@ public class WebTreeTable<E extends Entity> extends TreeTableImpl<E>
 
     protected LegacySettingsDelegate createSettingsDelegate() {
         return (LegacySettingsDelegate) applicationContext.getBean(LegacySettingsDelegate.NAME,
-                this, new LegacyTableSettingsConverter(), getSettingsBinder());
+                this, new LegacyTreeTableSettingsConverter(), getSettingsBinder());
     }
 
     @Override
