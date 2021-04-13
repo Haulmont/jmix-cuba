@@ -56,7 +56,6 @@ public class CubaTreeTableSettingsBinder extends TreeTableSettingsBinder {
 
         CubaTreeTableSettings tableSettings = wrapper.getSettings();
 
-        // save presentation
         if (!Objects.equals(tableSettings.getPresentationId(), table.getDefaultPresentationId())) {
             tableSettings.setPresentationId((UUID) table.getDefaultPresentationId());
 

@@ -57,7 +57,6 @@ public class CubaTableSettingsBinder extends TableSettingsBinder {
 
         CubaTableSettings tableSettings = wrapper.getSettings();
 
-        // save presentation
         if (!Objects.equals(tableSettings.getPresentationId(), table.getDefaultPresentationId())) {
             tableSettings.setPresentationId((UUID) table.getDefaultPresentationId());
 
@@ -70,7 +69,6 @@ public class CubaTableSettingsBinder extends TableSettingsBinder {
     public TableSettings getSettings(Table table) {
         CubaTableSettings settings = (CubaTableSettings) super.getSettings(table);
 
-        // get default presentation
         Object presentationId = table.getDefaultPresentationId();
         if (presentationId != null) {
             settings.setPresentationId(UuidProvider.fromString(String.valueOf(presentationId)));

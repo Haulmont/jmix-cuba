@@ -140,9 +140,7 @@ class PresentationsTest extends UiScreenSpec {
     }
 
     protected UiTablePresentation savePresentation(GroupTable groupTable) {
-        // change group column
         groupTable.groupByColumns("name")
-        // change width of column
         groupTable.getColumn("weight").setWidth(100)
 
         UiTablePresentation presentation = applicationContext.getBean(DataManager)
