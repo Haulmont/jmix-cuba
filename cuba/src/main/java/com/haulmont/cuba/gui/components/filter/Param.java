@@ -31,6 +31,7 @@ import com.haulmont.cuba.core.global.UserSessionSource;
 import com.haulmont.cuba.gui.UiComponents;
 import com.haulmont.cuba.gui.WindowManager;
 import com.haulmont.cuba.gui.WindowManagerProvider;
+import com.haulmont.cuba.gui.actions.picker.LookupAction;
 import com.haulmont.cuba.gui.components.FilterDataContext;
 import com.haulmont.cuba.gui.components.Frame.NotificationType;
 import com.haulmont.cuba.gui.components.ListEditor;
@@ -877,7 +878,7 @@ public class Param {
                 picker.setMetaClass(metaClass);
 
                 picker.setWidth(theme.get("cuba.gui.filter.Param.textComponent.width"));
-                picker.addAction(actions.create(EntityOpenAction.ID));
+                picker.addAction(actions.create(LookupAction.ID));
                 picker.addAction(actions.create(EntityClearAction.ID));
 
                 picker.addValueChangeListener(e ->
@@ -942,7 +943,7 @@ public class Param {
     protected CollectionLoader<Entity> createEntityOptionsLoader(MetaClass metaClass) {
         CollectionLoader<Entity> dataLoader = dataComponents.createCollectionLoader();
 
-        dataLoader.setView(entityView);
+        dataLoader.setFetchPlan(entityView);
 
         String query = String.format("select e from %s e", metaClass.getName());
         if (!Strings.isNullOrEmpty(entityWhere)) {
