@@ -347,26 +347,26 @@ public final class CubaScreens extends ScreensImpl implements Screens, WindowMan
 
     @Override
     protected DialogWindow createDialogWindow(WindowInfo windowInfo) {
-        return isLegacyScreen(windowInfo)
+        return isCubaScreen(windowInfo)
                 ? cubaUiComponents.create(DialogWindow.NAME)
                 : super.createDialogWindow(windowInfo);
     }
 
     @Override
     protected RootWindow createRootWindow(WindowInfo windowInfo) {
-        return isLegacyScreen(windowInfo)
+        return isCubaScreen(windowInfo)
                 ? cubaUiComponents.create(RootWindow.NAME)
                 : super.createRootWindow(windowInfo);
     }
 
     @Override
     protected TabWindow createTabWindow(WindowInfo windowInfo) {
-        return isLegacyScreen(windowInfo)
+        return isCubaScreen(windowInfo)
                 ? cubaUiComponents.create(TabWindow.NAME)
                 : super.createTabWindow(windowInfo);
     }
 
-    protected boolean isLegacyScreen(WindowInfo windowInfo) {
+    protected boolean isCubaScreen(WindowInfo windowInfo) {
         String template = windowInfo.getTemplate();
         if (Strings.isNullOrEmpty(template)) {
             // screen without template considered as Jmix screen
