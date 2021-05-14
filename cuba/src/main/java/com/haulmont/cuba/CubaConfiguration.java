@@ -36,6 +36,7 @@ import com.haulmont.cuba.gui.presentation.PresentationsImpl;
 import com.haulmont.cuba.gui.xml.CubaPropertyShortcutLoader;
 import com.haulmont.cuba.security.app.UserSettingServiceBean;
 import com.haulmont.cuba.web.app.settings.UserSettingsToolsImpl;
+import com.haulmont.cuba.web.gui.CubaUiControllerDependencyInjector;
 import com.haulmont.cuba.web.gui.CubaUiControllerDependencyManager;
 import com.haulmont.cuba.web.sys.*;
 import com.haulmont.cuba.web.sys.navigation.CubaUrlChangeHandler;
@@ -202,6 +203,13 @@ public class CubaConfiguration {
     @Primary
     protected UiControllerDependencyManager uiControllerDependencyManager() {
         return new CubaUiControllerDependencyManager();
+    }
+
+    @Bean("cuba_UiControllerDependencyInjector")
+    @Primary
+    protected UiControllerDependencyInjector uiControllerDependencyInjector(ApplicationContext applicationContext,
+                                                                            UiControllerReflectionInspector inspector) {
+        return new CubaUiControllerDependencyInjector(applicationContext, inspector);
     }
 
     @Bean("cuba_MenuItemCommands")
