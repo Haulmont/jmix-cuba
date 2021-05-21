@@ -103,13 +103,13 @@ public class LookupClassBuilder<E, S extends Screen & LookupScreen<E>>
     }
 
     @Override
-    public LookupClassBuilder<E, S> withAfterShowListener(Consumer<Screen.AfterShowEvent<S>> listener) {
+    public LookupClassBuilder<E, S> withAfterShowListener(Consumer<Screen.AfterShowEvent> listener) {
         super.withAfterShowListener(listener);
         return this;
     }
 
     @Override
-    public LookupClassBuilder<E, S> withAfterCloseListener(Consumer<Screen.AfterCloseEvent<S>> listener) {
+    public LookupClassBuilder<E, S> withAfterCloseListener(Consumer<Screen.AfterCloseEvent> listener) {
         super.withAfterCloseListener(listener);
         return this;
     }

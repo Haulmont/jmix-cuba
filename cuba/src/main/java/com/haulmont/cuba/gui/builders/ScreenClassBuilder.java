@@ -64,13 +64,13 @@ public class ScreenClassBuilder<S extends Screen> extends io.jmix.ui.builder.Scr
     }
 
     @Override
-    public ScreenClassBuilder<S> withAfterShowListener(Consumer<Screen.AfterShowEvent<S>> listener) {
+    public ScreenClassBuilder<S> withAfterShowListener(Consumer<Screen.AfterShowEvent> listener) {
         super.withAfterShowListener(listener);
         return this;
     }
 
     @Override
-    public ScreenClassBuilder<S> withAfterCloseListener(Consumer<Screen.AfterCloseEvent<S>> listener) {
+    public ScreenClassBuilder<S> withAfterCloseListener(Consumer<Screen.AfterCloseEvent> listener) {
         super.withAfterCloseListener(listener);
         return this;
     }
